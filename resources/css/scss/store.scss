@@ -1,0 +1,868 @@
+.no-scroll {
+    @apply overflow-y-hidden;
+}
+
+
+.header-main {
+    font-family: 'Open Sans', sans-serif;
+    @apply relative z-99;
+}
+.headerStore {
+    @apply fixed top-0 w-full;
+}
+
+.tight__header .header-bottom {
+    @apply h-auto;
+    transition: all 0.5s ease-in-out;
+}
+.tight__header .header-bottom-logo-main {
+    @apply h-11 w-[100px];
+    background-size: 70px;
+    transition: all 0.5s ease-in-out;
+}
+.tight__header .header-bottom-left {
+    transition: all 0.5s ease-in-out;
+}
+.tight__header .menu-hidden-list1,
+.tight__header .menu-hidden-list2,
+.tight__header .menu-hidden-list3,
+.tight__header .menu-hidden-list4,
+.tight__header .menu-hidden-list5,
+.tight__header .menu-hidden-list6 {
+    @apply top-11;
+}
+
+.burgerMenu {
+    @apply hidden fixed right-0 w-full h-full top-[126px] overflow-y-scroll bg-dark1 text-white transform translate-x-full transition-all duration-300 ease-in-out;
+}
+.burgerMenu-main {
+    @apply pt-0 pb-20;
+}
+.burgerMenu-main-list {
+    @apply px-5 py-2.5 border-b-1 border-b-gray5 border-opacity-20 flex flex-col;
+}
+.burgerMenu-main-list a, .burgerMenu-main-list-heading {
+    @apply flex items-center relative;
+}
+.burgerMenu-main-list:nth-child(n+3) {
+    @apply bg-dark4;
+}
+.burgerMenu-main-list.bg-darkness {
+    @apply bg-dark1;
+}
+.burgerMenu-main-list.bgBlue {
+    @apply bg-lightblue2;
+}
+.burgerMenu-main-list svg {
+    @apply mr-2.5 text-white;
+}
+.burgerMenu-main-list .cart-counts {
+    @apply relative bg-transparent p-0 m-0 top-0 right-0 border-0 text-base;
+}
+.minusIcon {
+    @apply hidden;
+}
+.burgerMenu-main-list.bgBlue .minusIcon {
+    @apply block;
+}
+.burgerMenu-main-list.bgBlue .plusIcon {
+    @apply hidden;
+}
+.burgerMenu-main-list.sales {
+    @apply text-orange1;
+}
+.burgerMenu-main-list.sales svg {
+    @apply text-orange1;
+}
+.burgerMenu-submenu {
+    @apply hidden px-[46px] py-2.5 bg-dark5;
+}
+.burgerMenu-submenu.show_submenu {
+    @apply block;
+}
+.burgerMenu-submenu-list {
+    @apply py-1.5 text-[13px] text-gray5;
+}
+
+
+
+.showBurgerMenu {
+    @apply transform translate-x-0 transition-all duration-300 ease-in-out;
+}
+
+
+
+.header-bottom-right-login {
+    @apply h-full w-1/5 relative;
+}
+.header-bottom-right-login-main {
+    @apply h-full relative flex items-center justify-center transition-all duration-300;
+}
+.btn-personalArea {
+    @apply relative;
+}
+.header-bottom-right-login-main:hover svg {
+    @apply text-white transition-all duration-300;
+}
+.header-bottom-right-login-main:hover {
+    @apply bg-dark1 transition-all duration-300;
+}
+.header-signIn-nav {
+    @apply bg-white absolute min-w-300 left-auto -right-2.5 top-41px text-black;
+}
+.store-box-shadow2 {
+    @apply border-t-3 border-lightblue2;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+}
+.store-box-shadow2::before {
+    @apply top-0 border-7 border-transparent border-t-7 border-lightblue2 left-auto right-27% absolute block;
+}
+.header-signIn-form-main {
+    @apply pt-1 px-15px mb-2.5;
+}
+.header-signIn-form-login {
+    @apply mb-0.5 relative;
+}
+.signIn-login-lbl {
+    @apply text-xs mb-2 font-bold text-black2;
+}
+.signIn-login-input {
+    @apply text-darkgray2 text-sm pl-3 pr-8 h-34 w-full bg-silver1;
+}
+.signIn-password-lbl {
+    @apply text-xs mb-2 font-bold text-black2;
+}
+.forgot-password-link {
+    @apply text-lightblue2 hover:underline;
+}
+.signIn-password-input {
+    @apply text-darkgray2 text-sm pl-3 pr-8 h-34 w-full bg-silver1;
+}
+.btn-signIn {
+    @apply w-1/2 duration-300 rounded-19px bg-lightblue2 py-2 px-7.5 text-sm leading-1.5 text-white mt-22px mb-2.5;
+}
+.btn-signIn:hover {
+    @apply opacity-80 duration-300;
+}
+.signUp-newUser {
+    @apply text-sm text-lightblue2 hover:underline;
+}
+
+
+.storeHeader-burger {
+    @apply hidden ml-2.5;
+}
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+
+
+.header-bottom {
+    @apply w-full h-68 relative bg-white z-10;
+    transition: all 0.5s ease-in-out;
+}
+.headerBottom-boxShadow {
+    box-shadow: 0 0 22px 10px rgb(0 0 0 / 17%);
+}
+.header-bottom-container {
+    @apply container static max-w-1170 mx-auto px-15px h-full;
+}
+.header-bottom-logo {
+    @apply absolute inline-block z-50;
+}
+.header-bottom-logo-main {
+    @apply w-136px h-20 p-5 inline-block;
+    background: #112038 url(../../img/store/logo.png) center center no-repeat;
+    transition: all 0.5s ease-in-out;
+}
+.header-bottom-main {
+    @apply relative flex h-full;
+}
+.header-bottom-left {
+    @apply max-w-80% relative h-full;
+    transition: all 0.5s ease-in-out;
+}
+.header-bottom-left-main {
+    @apply flex h-full relative;
+}
+.header-bottom-left-nav {
+    @apply flex pl-48 static;
+}
+.header-bottom-left-list {
+    @apply static px-25px flex items-center;
+}
+.textRed {
+    @apply text-salesColor;
+}
+.textRed .header-bottom-left-list-link {
+    @apply font-bold;
+}
+.header-bottom-left-list-link {
+    @apply font-light;
+}
+
+.tight__header .header-bottom-left-list-link {
+    @apply py-2.5;
+}
+
+.searchMobile {
+    @apply hidden relative;
+}
+.searchMobile-form {
+    @apply flex relative items-center;
+}
+.searchMobile-form input {
+    @apply text-sm py-2.5 pl-3 pr-12 border-1 border-gray5 outline-none transition-all duration-300 ease-linear;
+}
+.searchMobile-form input:focus {
+    @apply transition-all duration-300 ease-linear;
+    box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+}
+.searchMobile-form input::placeholder {
+    @apply opacity-100 transition-all duration-300 ease-in-out;
+}
+.searchMobile-form input:focus::placeholder {
+    @apply opacity-0 transition-all duration-300 ease-in-out;
+}
+.btn-searchMobile {
+    @apply absolute right-0 pr-3;
+}
+
+
+.header-bottom-right {
+    @apply w-full flex justify-end items-center;
+}
+.header-bottom-right-contactUs {
+    @apply relative h-full w-1/5 transition-all duration-300;
+}
+.header-bottom-right-contactUs:hover {
+    @apply bg-dark1 transition-all duration-300;
+}
+.header-bottom-right-contactUs:hover svg {
+    @apply text-white transition-all duration-300;
+}
+.btn-contactUs {
+    @apply flex w-full h-full items-center justify-center;
+}
+.header-bottom-right-search {
+    @apply h-full w-1/5 transition-all duration-300 relative;
+}
+.help-window {
+    @apply opacity-0 invisible transition-all duration-300 absolute bg-black bg-opacity-50 text-white py-1 px-2.5 text-[10px] rounded-md -bottom-8;
+}
+.help-window:before {
+    content: "";
+    @apply absolute -top-4 left-[15px];
+    border: 8px solid transparent;
+    border-bottom: 8px solid rgba(0, 0, 0, 0.5);
+}
+.help-window.account-help, .help-window.cart-help {
+    @apply -left-1.5;
+}
+.help-window.account-help:before, .help-window.cart-help:before {
+    @apply left-[22px];
+}
+.header-bottom-right-search:hover .help-window.search-help {
+    @apply opacity-100 visible transition-all duration-300;
+}
+.header-bottom-right-login:hover .help-window.account-help {
+    @apply opacity-100 visible transition-all duration-300;
+}
+.header-bottom-right-cart:hover .help-window.cart-help {
+    @apply opacity-100 visible transition-all duration-300;
+}
+.header-bottom-right-search:hover {
+    @apply bg-dark1 transition-all duration-300;
+}
+.header-bottom-right-search:hover svg {
+    @apply text-white transition-all duration-300;
+}
+.btn-search {
+    @apply border-0 outline-none bg-none p-0 ring-0 w-full h-full flex items-center justify-center;
+}
+
+
+.header-bottom-right-cart {
+    @apply w-1/5 h-full relative transition-all duration-300;
+}
+.header-bottom-right-cart a {
+    @apply w-full h-full flex justify-center items-center relative;
+}
+.header-bottom-right-cart svg {
+    @apply w-6 h-6 transition-all duration-300;
+}
+.header-bottom-right-cart:hover {
+    @apply bg-dark1 transition-all duration-300;
+}
+.header-bottom-right-cart:hover svg {
+    @apply text-white transition-all duration-300;
+}
+.cart-counts {
+    @apply absolute top-2.5 right-0.5 bg-btnCredit text-white text-xs font-bold border-1 border-btnCredit rounded-[50%] py-0.5 px-1;
+}
+
+
+.relative-list-block {
+    @apply relative;
+}
+.relative-list-block img {
+    @apply hidden absolute left-307 top-0 w-[281px] min-w-[281px] max-w-[281px] h-[150px] object-cover;
+}
+.relative-list-block img.show-img1 {
+    @apply block;
+}
+
+
+.menu-hidden-list1, .menu-hidden-list2, .menu-hidden-list3, .menu-hidden-list4, .menu-hidden-list5, .menu-hidden-list6 {
+    @apply border-t-3 border-t-lightblue2 w-4/5 top-68px absolute px-45px py-15px bg-white text-sm text-darkblue2 left-[249px] min-h-[183px];
+    box-shadow: 0 6px 24px rgb(0 0 0 / 6%);
+}
+.show-list1:hover .show-img1, .show-list2:hover .show-img2, .show-list3:hover .show-img3, .show-list4:hover .show-img4, .show-list5:hover .show-img5, .show-list6:hover .show-img6, .show-list7:hover .show-img7, .show-list8:hover .show-img8, .show-list9:hover .show-img9, .show-list10:hover .show-img10, .show-list11:hover .show-img11, .show-list12:hover .show-img12, .show-list13:hover .show-img13, .show-list14:hover .show-img14, .show-list15:hover .show-img15 {
+    display: block;
+    transition: 0.4s;
+}
+.show-list1 a:hover, .show-list2 a:hover, .show-list3 a:hover, .show-list4 a:hover, .show-list5 a:hover, .show-list6 a:hover, .show-list7 a:hover, .show-list8 a:hover, .show-list9 a:hover, .show-list10 a:hover, .show-list11 a:hover, .show-list12 a:hover, .show-list13 a:hover, .show-list14 a:hover, .show-list15 a:hover {
+    color: rgba(17, 31, 56, 0.6);
+    transition: 0.4s;
+}
+.show-menu1:hover .menu-hidden-list1, .show-menu2:hover .menu-hidden-list2, .show-menu3:hover .menu-hidden-list3, .show-menu4:hover .menu-hidden-list4, .show-menu5:hover .menu-hidden-list5, .show-menu6:hover .menu-hidden-list6 {
+    display: block;
+}
+.menu-hidden-list1::before {
+    @apply border-10 border-transparent border-t-10 border-t-lightblue2 absolute left-[90px] z-1 top-0;
+    content: "";
+}
+.menu-hidden-list2::before {
+    @apply border-10 border-transparent border-t-10 border-t-lightblue2 absolute left-[180px] z-1 top-0;
+    content: "";
+}
+.menu-hidden-list3::before {
+    @apply border-10 border-transparent border-t-10 border-t-lightblue2 absolute left-[270px] z-1 top-0;
+    content: "";
+}
+.menu-hidden-list4::before {
+    @apply border-10 border-transparent border-t-10 border-t-lightblue2 absolute left-[370px] z-1 top-0;
+    content: "";
+}
+.menu-hidden-list5::before {
+    @apply border-10 border-transparent border-t-10 border-t-lightblue2 absolute left-[480px] z-1 top-0;
+    content: "";
+}
+.menu-hidden-list6::before {
+    @apply border-10 border-transparent border-t-10 border-t-lightblue2 absolute left-[610px] z-1 top-0;
+    content: "";
+}
+
+
+
+.storeSlider {
+    @apply relative container mx-auto px-15px h-full pt-[68px];
+}
+.storeSlider-menuSlider {
+    @apply relative my-50px w-full;
+}
+.storeSlider-menuSlider-main {
+    @apply flex w-full h-[400px] mt-[50px];
+}
+.storeSlider-smallSlider {
+    @apply w-1/3 h-full ml-5;
+}
+.smallSwiper {
+    @apply h-full overflow-hidden;
+}
+.smallSwiper a::after {
+    content: "";
+    @apply absolute w-full h-full top-0 bg-black opacity-30 z-1;
+}
+.smallSwiper img {
+    @apply w-full h-full object-cover;
+}
+.smallSwiper-swiper-navsBtn {
+    @apply absolute top-0 h-full w-full;
+}
+.smallSwiper-btnPrev {
+    @apply absolute flex justify-center w-full cursor-pointer top-0 z-1 transition-all duration-500 ease-in-out transform -translate-y-full opacity-0;
+}
+.smallSwiper-btnNext {
+    @apply absolute flex justify-center w-full cursor-pointer bottom-0 z-1 transition-all duration-500 ease-in-out transform translate-y-full opacity-0;
+}
+.smallSwiper-btnPrev:hover, .smallSwiper-btnNext:hover {
+    @apply transition-all duration-500 ease-in-out bg-opacity-100;
+}
+.smallSwiper-swiper-navsBtn svg {
+    @apply transform rotate-90 text-white w-10 h-10;
+}
+.smallSwiper:hover .smallSwiper-btnPrev, .smallSwiper:hover .smallSwiper-btnNext {
+    @apply transition-all duration-500 ease-in-out transform translate-y-0 opacity-100;
+}
+.storeSlider-mainSlider {
+    @apply w-2/3 h-full;
+}
+.storeSlider-swiper {
+    @apply h-full;
+}
+.storeSlider-swiper .swiper-wrapper img {
+    @apply w-full h-full object-cover;
+}
+.storeSlider-swiper-navsBtn {
+    @apply absolute top-0 w-full h-full;
+}
+.main-btnPrev {
+    @apply absolute h-full flex items-center pl-2.5 m-0 z-1 left-0 cursor-pointer transform ease-in-out -translate-x-full transition-all duration-500 opacity-0 hover:transition-all hover:duration-500 hover:bg-opacity-100;
+}
+.main-btnNext {
+    @apply absolute h-full flex items-center pr-2.5 m-0 z-1 right-0 cursor-pointer transform ease-in-out translate-x-full transition-all duration-500 opacity-0 hover:transition-all hover:duration-500 hover:bg-opacity-100;
+}
+.main-btnPrev svg, .main-btnNext svg {
+    @apply w-10 h-10 text-white;
+}
+
+.storeSlider-swiper:hover .main-btnPrev, .storeSlider-swiper:hover .main-btnNext {
+    @apply opacity-100 transform translate-x-0 transition-all duration-500 ease-in-out;
+}
+
+
+
+.mainStore {
+    @apply pt-2.5 pb-35px font-secondary;
+}
+.mainStore-container {
+    @apply container mx-auto max-w-1170 px-15px;
+}
+.mainStore-main {
+    @apply -mx-15px;
+}
+
+
+
+.mainStore-main-title {
+    @apply mb-15px text-28px font-semibold;
+}
+
+
+.mainStore-product {
+    @apply px-15px pt-5 pb-20 w-full relative;
+}
+.mainStore-product .swiper-products {
+    @apply relative;
+}
+.swiper-products .swiper-slide {
+    @apply h-auto;
+}
+.mainStore-product-single {
+    @apply mr-9px w-full h-full border-1 border-silver3 duration-300 hover:border-lightblue3;
+}
+.mainStore-product-item {
+    @apply h-full relative;
+}
+.saleMark {
+    @apply absolute top-0 left-0 bg-btnCredit bg-opacity-80 mt-2.5 text-white text-sm font-bold py-[5px] px-5;
+}
+.newMark {
+    @apply absolute top-0 left-0 bg-dark1 bg-opacity-80 mt-2.5 text-white text-sm font-bold py-[5px] px-5;
+}
+.mainStore-product-item-img {
+    @apply h-1/2 pt-5 px-5 pb-15px flex items-center justify-center;
+}
+.mainStore-product-item-img a {
+    @apply w-full h-full max-h-185px;
+}
+.mainStore-product-item-img img {
+    @apply max-w-full h-full w-full object-cover;
+}
+.mainStore-product-item-text {
+    @apply h-1/2 pt-15px px-5 pb-25px flex flex-col justify-between;
+}
+.mainStore-product-item-text h3 {
+    @apply leading-3 normal-case h-[75px] text-left;
+}
+.mainStore-product-item-text h3 a {
+    @apply text-[13px] font-normal leading-14px transition-all duration-150;
+}
+.mainStore-product-item-text h3 a:hover{
+    @apply underline transition-all duration-150;
+}
+.mainStore-product-item-price {
+    @apply flex flex-col text-left h-[43px];
+}
+.mainStore-product-item-price span {
+    @apply text-[22px] font-semibold leading-4;
+}
+.mainStore-product-item-price .oldPrice {
+    @apply text-lg line-through font-normal opacity-60;
+}
+.mainStore-product-item-saving {
+    @apply text-left pb-15px;
+}
+.mainStore-product-item-saving p {
+    @apply capitalize text-[13px] opacity-80 font-normal;
+}
+.mainStore-product-item-saving .savingPrice {
+    @apply text-[22px] text-orange2 font-semibold;
+}
+.mainStore-product-item-btnBuy {
+    @apply mt-3 text-center flex justify-between relative flex-wrap;
+}
+.mainStore-product-item-btnBuy form {
+    @apply w-full md:w-auto;
+}
+.mainStore-product-item-btnBuy .checkout-btn {
+    @apply left-0;
+}
+.btnBuy {
+    @apply bg-lightblue2 duration-300 leading-39px h-41 rounded-19px border border-transparent text-center text-white hover:bg-darkblue3;
+}
+.btnBuy span {
+    @apply py-5px px-5 text-sm;
+}
+.btnCredit {
+    @apply w-[112px] bg-btnCredit duration-300 leading-39px h-41 rounded-19px border border-transparent text-center text-white hover:bg-opacity-80;
+}
+.btnCredit-numbs, .btnCredit-text {
+    @apply py-5px px-5 text-sm;
+}
+.btnCredit-text {
+    @apply hidden transition-all duration-300 max-h-[29px];
+}
+.btnCredit:hover .btnCredit-numbs {
+    @apply hidden transition-all duration-300;
+}
+.btnCredit:hover .btnCredit-text {
+    @apply block transition-all duration-300;
+}
+
+
+.products-btnPrev {
+    @apply absolute -top-40px left-0 cursor-pointer select-none;
+}
+.products-btnPrev::after {
+    @apply border-l border-l-lightblue2 border-b border-b-lightblue2 block absolute w-15px h-15px rotate-45 top-0 left-0;
+    content: '';
+}
+.products-btnNext {
+    @apply absolute -top-40px right-0 cursor-pointer select-none;
+}
+.products-btnNext::after {
+    @apply border-t border-t-lightblue2 border-r border-r-lightblue2 block absolute w-15px h-15px rotate-45 top-0 left-0;
+    content: '';
+}
+.swiper-button-disabled {
+    @apply opacity-50 cursor-default;
+}
+
+.mainStore-product-popularProds {
+    @apply flex pt-5 px-15px pb-20 -mx-10px relative;
+}
+.mainStore-product-popularProds-main {
+    @apply mr-2.5 border-1 border-silver3 duration-300 hover:border-lightblue3;
+}
+.mainStore-product-popularProds-main:last-child {
+    @apply mr-0;
+}
+.mainStore-product-popularProds .btnBuy span {
+    @apply text-base;
+}
+.popularProds-swiper .swiper-slide {
+    @apply h-auto;
+}
+.mainStore-product-popularProds-main {
+    @apply h-full;
+}
+.popularProds-navs {
+    @apply absolute w-full h-auto flex top-[-46px] select-none;
+}
+.popularProds-btnPrev {
+    @apply absolute left-[-30px] cursor-pointer;
+}
+.popularProds-btnNext {
+    @apply absolute right-0 cursor-pointer;
+}
+.popularProds-btnNext.swiper-button-disabled, .popularProds-btnPrev.swiper-button-disabled {
+    @apply cursor-default;
+}
+.popularProds-btnPrev svg, .popularProds-btnNext svg {
+    @apply w-7 h-7 text-lightblue2;
+}
+
+
+.mainStore-services {
+    @apply bg-silver2;
+}
+.mainStore-services-main {
+    @apply table-row h-auto;
+}
+.mainStore-services-item {
+    @apply w-20% table-cell p-5;
+}
+.mainStore-services-icon {
+    @apply w-50px h-50px block bg-no-repeat mb-5;
+}
+.mainStore-services-item:nth-child(1) .mainStore-services-icon {
+    background-image: url(../../img/store/main-slider2/small1.svg);
+}
+.mainStore-services-item:nth-child(2) .mainStore-services-icon {
+    background-image: url(../../img/store/main-slider2/small2.svg);
+}
+.mainStore-services-item:nth-child(3) .mainStore-services-icon {
+    background-image: url(../../img/store/main-slider2/small3.svg);
+}
+.mainStore-services-item:nth-child(4) .mainStore-services-icon {
+    background-image: url(../../img/store/main-slider2/small4.svg);
+}
+.mainStore-services-desc {
+    @apply text-13px font-light leading-18px;
+}
+
+
+.subscribe {
+    @apply bg-silver2;
+}
+.subscribe-main {
+    @apply container mx-auto max-w-1170 px-15px;
+}
+.subscribe form {
+    @apply py-65px flex;
+}
+.subscribe-left {
+    @apply w-30% mr-5;
+}
+.subscribe-left-title {
+    @apply text-2xl font-medium mb-5 uppercase;
+}
+.subscribe-left-text {
+    @apply text-13px;
+}
+.subscribe-right {
+    @apply relative w-70%;
+}
+.subscribe-right input {
+    @apply outline-none border border-silver4 rounded-19px text-sm leading-41px py-3 pl-25px pr-185px w-full h-41;
+}
+.subscribe-btn {
+    @apply absolute top-0 right-0 w-full max-w-176 text-white bg-lightblue2 text-15px h-41 text-center rounded-19px;
+}
+.subscribe-right-desc {
+    @apply mt-5 text-13px w-full;
+}
+.subscribe-right-desc a {
+    @apply text-lightblue2 underline;
+}
+.subscribe-warning {
+    @apply py-[65px] text-sm text-center;
+}
+
+
+.footerStore {
+    @apply text-footerlinks font-secondary;
+}
+.footerStore-main {
+    @apply bg-dark1 pt-10;
+}
+.footerStore-container {
+    @apply relative w-full max-w-1170 mx-auto px-15px;
+}
+.footerStore-top, .footerStore-bottom {
+    @apply flex -mx-15px;
+}
+.footerStore-left {
+    @apply w-22% mr-1%;
+}
+.footerStore-logo-mobile {
+    @apply hidden;
+}
+.footerStore-left-logo {
+    @apply mb-6;
+}
+.footerStore-left-logo img {
+    @apply max-w-full max-h-full;
+}
+.footerStore-left-contacts {
+    @apply mb-15px pr-2.5;
+}
+.footerStore-left-contacts-title {
+    @apply text-white text-15px uppercase mb-5px;
+}
+.footerStore-left-contacts-text {
+    @apply text-xs text-white opacity-40;
+}
+.footerStore-link {
+    @apply text-xs text-white opacity-40 hover:opacity-70 duration-700 hover:underline;
+}
+.footerStore-item {
+    @apply flex flex-col mb-26px;
+}
+.footerStore-item.mobile-link {
+    @apply hidden;
+}
+.footerStore-main-title {
+    @apply text-white text-15px uppercase mb-9px hover:opacity-70 hover:underline duration-700;
+}
+.footerStore-right {
+    @apply w-77% border-b border-b-dark3;
+}
+.footerStore-right-main {
+    @apply flex;
+}
+.footerStore-right-item {
+    @apply pr-5 w-4/12;
+}
+.footerStore-right-item:last-child {
+    @apply pr-0;
+}
+.footerStore-bottom-main {
+    @apply ml-23% w-77% flex flex-col py-26px;
+}
+.footerStore-bottom-container {
+    @apply flex justify-between;
+}
+.footerStore-bottom-desc {
+    @apply text-xs text-white opacity-40;
+}
+.footerStore-bottom-text {
+    @apply -mt-10px w-1/2 flex justify-between;
+}
+.footerStore-bottom-workMode {
+    @apply text-xs text-white opacity-40;
+}
+.footerStore-bottom-pay {
+    @apply flex items-center;
+}
+.footerStore-bottom-pay label {
+    @apply text-xs text-white opacity-40;
+}
+.footerStore-bottom-pay img {
+    @apply h-34 ml-10px max-h-full max-w-full;
+}
+
+
+
+
+.modalSearch-main {
+    @apply flex items-center absolute bg-transparent z-10 w-full h-full transition-all duration-300 ease-in-out opacity-100 visible;
+}
+.modalSearch-form {
+    @apply relative pl-48 w-full;
+}
+.modalSearch-form-inpt {
+    @apply relative;
+}
+.modalSearch-form-inpt input {
+    @apply rounded-full w-full text-black2 bg-silver1 border-0 text-sm py-2.5 pl-45px pr-140px outline-none;
+}
+.modalSearch-modalSearchBtn {
+    @apply absolute top-0 right-0 bottom-0 flex;
+}
+.modalSearchBtn {
+    @apply rounded-full bg-lightblue2 uppercase text-white duration-500 absolute top-0 right-0 px-[60px] py-2;
+}
+.btn-close-modal {
+    @apply absolute block w-25px h-25px -top-3.5 translate-y-1/2 -right-10;
+}
+.btn-close-modal::before {
+    @apply block w-25px h-px bg-black -rotate-45 top-2.5 left-1 relative;
+    content: "";
+}
+.btn-close-modal::after {
+    @apply block w-25px h-px bg-black rotate-45 top-9px left-1 relative;
+    content: "";
+}
+.hidden-search {
+    @apply opacity-0 invisible transition-all duration-300 ease-in-out;
+}
+
+
+.modalSearch-list {
+    @apply opacity-0 invisible absolute top-[54px] bg-white border border-darkblue2 p-10 text-sm flex flex-col w-[79%];
+}
+.modalSearch-list.show {
+    @apply opacity-100 visible transition-all duration-300;
+}
+.modalSearch-list a {
+    @apply mb-2.5 py-2.5 border-b border-black font-semibold transition-all duration-300;
+}
+.modalSearch-list a:hover {
+    @apply opacity-50 transition-all duration-300;
+}
+
+
+
+.whatsApp {
+    @apply fixed w-[60px] h-[60px] z-99 bottom-10 right-5;
+}
+.whatsApp.close {
+    @apply hidden;
+}
+.close-whatsApp {
+    @apply absolute -right-2.5 -top-2.5;
+}
+.whatsApp a {
+    @apply w-full h-full block transition-all duration-700 rounded-full;
+    animation: pulse 3s linear infinite;
+    transition: all 200ms ease-out;
+}
+.whatsApp a:hover {
+    @apply transform scale-110 transition-all duration-700;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0,170,41, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(0,170,41, 0.4);
+      box-shadow: 0 0 0 0 rgba(0,170,41, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+
+.error-message {
+    @apply text-xs text-red-600;
+}

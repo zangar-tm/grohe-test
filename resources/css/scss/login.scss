@@ -1,0 +1,235 @@
+.loginPage-content {
+    @apply pb-10;
+}
+
+.loginPage-select {
+    @apply flex pt-10;
+}
+.loginPage-select-main {
+    @apply px-5 py-2.5 text-xl bg-silver2 rounded-tl-2xl rounded-tr-2xl relative;
+}
+.loginPage-select-main.selected {
+    @apply bg-dark1 text-white;
+}
+.loginPage-select-main.selected:before {
+    content: "";
+    @apply block w-5 h-5 border-t-10 border-t-dark1 border-l-10 border-l-transparent border-r-10 border-r-transparent absolute -bottom-5 left-[40%];
+}
+.loginPage-select-main.selected .loginPage-btnSelect {
+    @apply font-bold;
+}
+
+
+.signIn-form {
+    @apply flex flex-col w-full border-t-4 border-t-dark1 py-10 px-8 border-1 border-gray6;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
+}
+.signIn-form.hide {
+    @apply hidden;
+}
+.signIn-input {
+    @apply w-3/12 flex flex-col mb-5;
+}
+.signIn-input .forgot-pswrd {
+    @apply underline hover:no-underline w-[fit-content];
+}
+
+
+.loginPage-form-signUp, .loginPage-form-signIn {
+    @apply pt-9 bg-silver2;
+}
+.signUp-form {
+    @apply flex flex-wrap w-full border-t-4 border-t-dark1 py-10 border-1 border-gray6;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
+}
+.signUp-item {
+    @apply w-1/2 px-8 mb-9;
+}
+.signUp-item h1, .signIn-form h1 {
+    @apply text-base uppercase text-lightblue2 mb-5;
+}
+.signUp-input {
+    @apply flex flex-col mb-5;
+}
+.signUp-input label, .signIn-input label {
+    @apply mb-2.5 text-sm;
+}
+.signUp-input span, .signIn-input span {
+    @apply text-errorColor;
+}
+.signUp-input input, .signIn-input input {
+    @apply outline-none p-2.5 border-1 border-gray5 h-[38px];
+}
+.signUp-input input:focus, .signIn-input input:focus {
+    @apply transition-all duration-300 ease-linear;
+    box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+}
+.signUp-chelbox {
+    @apply flex text-sm items-center;
+}
+.signUp-chelbox input {
+    @apply cursor-pointer;
+}
+.signUp-chelbox p {
+    @apply ml-2.5;
+}
+.password-secure {
+    @apply text-sm;
+}
+.signUp-btn {
+    @apply w-full px-8;
+}
+.btnSignUp, .signInBtn {
+    @apply bg-lightblue2 py-2 px-4 text-white hover:opacity-90 transition-all duration-300 hover:transition-all hover:duration-300;
+}
+
+
+.restore {
+    @apply hidden flex-col w-full border-t-4 border-t-dark1 py-10 px-8 border-1 border-gray6;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
+    h1 {
+        @apply text-base uppercase text-lightblue2 mb-5;
+    }
+    .email-form {
+        .signIn-input {
+            span {
+                @apply mt-2.5 text-xs text-black;
+            }
+        }
+    }
+    &-form {
+        @apply mt-10;
+        .notification{
+            @apply py-[15px] px-5 bg-notificationBG text-notificationText w-1/4 text-sm mb-5;
+        }
+        .help-text {
+            @apply hidden border-l-[6px] border-leftBrdrClr pl-2.5 py-1.5 text-black text-xs mt-2;
+            &.show {
+                @apply block;
+            }
+        }
+    }
+    &.show {
+        @apply flex;
+    }
+}
+
+
+
+
+@media(max-width: 768px) {
+
+    .contactsPage-content-main {
+        @apply w-full;
+    }
+    .contactsPage-form {
+        @apply flex flex-col items-center;
+    }
+    .contactsPage-input {
+        @apply flex-col w-3/4;
+    }
+    .contactsPage-input-item {
+        @apply w-full mb-5;
+    }
+    .contactsPage-select {
+        @apply flex-col w-3/4 items-center;
+    }
+    .contactsPage-select-item {
+        @apply w-full mb-5 items-center;
+    }
+    .contactsPage-comment, .contactsPage-btnSubmit {
+        @apply w-3/4;
+    }
+    .btn-btnSubmit {
+        @apply w-full;
+    }
+
+    .restore {
+        .email-form {
+            .signIn-input {
+                @apply w-[35%];
+            }
+        }
+        &-form {
+            .signIn-input {
+                @apply w-[35%];
+            }
+           .notification{
+                @apply w-[35%];
+            }
+        }
+    }
+
+}
+
+@media(max-width: 550px) {
+    
+    .contactsPage-form {
+        @apply px-0;
+    }
+    .contactsPage-select-item select {
+        @apply w-full;
+    }
+
+    .restore {
+        @apply items-center;
+        .email-form {
+            @apply flex w-full flex-col items-center;
+            .signIn-input {
+                @apply w-3/4;
+            }
+            .signIn-btn {
+                @apply w-3/4;
+                .signInBtn {
+                    @apply w-full;
+                }
+            }
+        }
+        &-form {
+            @apply w-full flex flex-col items-center;
+            .notification{
+                @apply w-3/4;
+            }
+            .signIn-input {
+                @apply w-3/4;
+            }
+            .signInBtn {
+                @apply w-3/4;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 390px) {
+
+    .signIn-form .signIn-input {
+        @apply w-full;
+    }
+    .signIn-form .signIn-btn {
+        @apply w-full;
+    }
+    
+    .restore {
+        .email-form {
+            .signIn-input {
+                @apply w-full;
+            }
+            .signIn-btn {
+                @apply w-full;
+            }
+        }
+        &-form {
+            .notification{
+                @apply w-full;
+            }
+            .signIn-input {
+                @apply w-full;
+            }
+            .signInBtn {
+                @apply w-full;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,263 @@
+.productPage {
+    @apply pb-20;
+}
+.categories {
+    @apply bg-silver5 md:pt-20 pt-[140px] pb-5;
+}
+.categories-main {
+    @apply relative md:left-[11%] left-0 flex;
+}
+.categories-main a {
+    @apply mr-5 text-xs underline hover:no-underline;
+}
+
+.productPage-main {
+    @apply md:py-20 py-10 flex md:flex-row flex-col;
+}
+.product-sliders {
+    @apply md:w-1/2 w-full md:h-[550px] h-[300px] md:mb-0 mb-[70px];
+}
+.product-swiper {
+    @apply md:h-4/5 h-full mb-2.5;
+}
+.product-swiper .swiper-img {
+    @apply border-1 border-gray5 h-full;
+}
+.swiper-img img {
+    @apply w-full object-contain h-full object-center;
+}
+.swiper-container {
+    @apply h-1/5 relative md:block hidden;
+}
+.product-swiper-thumbs {
+    @apply h-full;
+}
+.product-swiper-thumbs .swiper-img {
+    @apply border-1 border-gray5 h-full;
+}
+.product-swiper-thumbs .swiper-slide-active {
+    @apply ml-[0.5px];
+}
+.product-sliders .swiper-pagination {
+    @apply md:hidden flex justify-center w-full mt-5;
+}
+.product-sliders .swiper-pagination-bullet {
+    @apply w-4 h-4 rounded-[50%] transition-all duration-300 ease-in-out mr-2.5;
+    background: #a9a9a9;
+}
+.product-sliders .swiper-pagination-bullet-active {
+    @apply transition-all duration-300 ease-in-out;
+    background: #111f39;
+}
+
+.product-swiper-navs {
+    @apply absolute top-0 flex w-full items-center h-full;
+}
+.product-btnPrev {
+    @apply absolute left-[-50px] cursor-pointer select-none;
+}
+.product-btnNext {
+    @apply absolute right-[-50px] cursor-pointer select-none;
+}
+.product-btnPrev svg, .product-btnNext svg {
+    @apply w-[40px] h-[40px] text-dark1 transition-all duration-300;
+}
+.product-btnPrev:hover svg, .product-btnNext:hover svg {
+    @apply opacity-50 transition-all duration-300;
+}
+
+
+.product-desc {
+    @apply md:w-1/2 w-full md:ml-10 ml-0;
+}
+.product-item {
+    @apply mb-5 flex relative;
+}
+.code-numbs {
+    @apply text-gray2 ml-1.5;
+}
+.product-item a {
+    @apply flex;
+}
+.product-item a:hover span {
+    @apply underline;
+}
+.product-item a svg {
+    @apply mr-2.5;
+}
+.product-item:nth-child(4) {
+    @apply flex-col;
+}
+.product-item:nth-child(5) {
+    @apply mt-10;
+}
+.product-item .oldPrice {
+    @apply text-lg line-through font-normal;
+}
+.main-price {
+    @apply text-3xl font-semibold leading-4 mt-5;
+}
+.product-item .btnCredit {
+    @apply md:w-[112px] w-1/2;
+}
+.product-item .btnCredit-numbs {
+    @apply text-base;
+}
+.product-item .btnCredit-text {
+    @apply text-base pb-[30px];
+}
+.product-item .btnBuy {
+    @apply mr-0 ml-5 md:w-[112px] w-1/2;
+}
+.product-item .btnBuy span {
+    @apply text-base;
+}
+.product-item .checkout-btn {
+    @apply md:w-[112px] w-1/2 md:left-[110px] left-auto md:right-auto right-0 md:justify-start justify-center;
+}
+.product-item .checkout-btn:hover span {
+    @apply no-underline;
+}
+.buy-product.active-btn {
+    @apply opacity-100 visible transition-all duration-500;
+}
+.buy-product {
+    @apply opacity-0 invisible transition-all duration-500;
+}
+.checkout-btn.active-btn {
+    @apply opacity-100 visible transition-all duration-500;
+}
+.checkout-btn2 {
+    @apply absolute left-[110px] transition-all duration-500 opacity-0 invisible top-0;
+}
+.checkout-btn2.active-btn {
+    @apply opacity-100 visible transition-all duration-500;
+}
+.checkout-btn {
+    @apply absolute left-[110px] transition-all duration-500;
+}
+.inStock-true.show, .inStock-false.show {
+    @apply block;
+}
+.inStock-true {
+    @apply hidden text-yesCol;
+}
+.inStock-false {
+    @apply hidden text-btnCredit;
+}
+
+
+.product-overview {
+    @apply md:flex hidden;
+}
+.selections {
+    @apply flex relative;
+}
+.selections:before {
+    @apply absolute w-full h-0.5 bottom-0.5 bg-silver1;
+    content: "";
+}
+.selection-item {
+    @apply relative -mx-1.5 py-2.5 px-10;
+}
+.selection-item:nth-child(1) {
+    @apply px-[30px] z-4;
+}
+.selection-item:nth-child(2) {
+    @apply z-3;
+}
+.selection-item:before {
+    @apply absolute -top-0.5 right-0 left-0 z-[-1] border-2 border-silver1 rounded-tl-[5px] rounded-tr-[5px] bg-silver2 h-full w-full cursor-pointer;
+    transform: perspective(10px) rotateX(2deg);
+    transform-origin: bottom;
+    content: "";
+}
+.selection-item.selected:before {
+    @apply bg-white border-b-0;
+}
+.selection-item.selected {
+    @apply z-10;
+}
+
+
+.main-desc-item {
+    @apply hidden py-10 px-5 border-b-1 border-silver1;
+}
+.main-desc-item.show {
+    @apply block;
+}
+.td-title {
+    @apply font-bold w-1/4;
+}
+.download-link {
+    @apply flex w-1/2;
+}
+.download-link-main {
+    @apply w-2/5 mr-10;
+}
+.download-link-main h4 {
+    @apply relative font-bold;
+}
+.download-link-main h4:after {
+    @apply absolute left-0 -bottom-1.5 w-full h-0.5 border-b-2 border-silver1;
+    content: "";
+}
+.download-link-container {
+    @apply flex;
+}
+.download-link-item {
+    @apply flex flex-col items-center w-[30%] mt-8 mr-10;
+}
+.download-link-item a {
+    @apply text-center text-sm text-lightblue2 underline mt-1 hover:no-underline;
+}
+.download-link-item p {
+    @apply text-center text-sm;
+}
+
+
+.overview-mobile {
+    @apply md:hidden block;
+    &-title {
+        @apply text-white p-[15px] bg-darkblue2;
+        h2 {
+            @apply text-xl relative;
+            text-transform: none;
+            &:before {
+                content: "";
+                @apply block w-full absolute bottom-[-15px] h-px bg-white;
+            }
+            &:after {
+                content: "";
+                @apply block w-[15px] h-[15px] border-t-4 border-r-4 rotate-45 absolute top-1/2 mt-[-7px] right-[15px] transition-all duration-300 ease-in-out;
+                border-color: #e7ebee;
+            }
+            &.show {
+                &:after {
+                    @apply rotate-[135deg];
+                }
+                &:before {
+                    @apply hidden;
+                }
+            }
+        }
+    }
+    &-desc {
+        @apply hidden px-[30px] py-10;
+        &.show {
+            @apply block;
+        }
+        p {
+            @apply text-sm;
+        }
+        table {
+            @apply text-xs;
+        }
+    }
+    .download-link {
+        @apply w-full justify-between;
+        &-main {
+            @apply mr-0 w-[45%];
+        }
+    }
+}

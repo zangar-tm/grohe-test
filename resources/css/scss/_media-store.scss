@@ -1,0 +1,369 @@
+@media(max-width: 1440px) {
+
+    .btn-whatsApp {
+        @apply pr-20;
+    }
+    .btn-whatsApp a span {
+        @apply hidden;
+    }
+
+}
+
+@media(max-width: 1140px) {
+
+    .mainStore-container {
+        @apply max-w-[1000px];
+    }
+    
+    
+    .products-btnPrev {
+        @apply left-[30px];
+    }
+    .products-btnNext {
+        @apply right-10;
+    }
+
+
+    .popularProds-btnPrev {
+        @apply left-[30px];
+    }
+    .popularProds-btnNext {
+        @apply right-10;
+    }
+
+
+    .mainStore-product-popularProds {
+        @apply mx-0 justify-center;
+    }
+    .mainStore-product-item-price {
+        @apply flex flex-col h-[79px];
+    }
+    .mainStore-product-item-price .oldPrice {
+        @apply ml-0 mt-5;
+    }
+    .btnBuy {
+        @apply mr-0 mb-2.5 w-full;
+    }
+    .btnCredit {
+        @apply w-full;
+    }
+
+
+    .footerStore-top, .footerStore-bottom {
+        @apply m-0;
+    }
+}
+
+@media(max-width: 1024px) {
+    
+    .header-bottom-left-nav {
+        @apply pl-[140px];
+    }
+    .header-bottom-right-contactUs, .header-bottom-right-search, .header-bottom-right-login {
+        @apply w-1/5;
+    }
+
+
+    .menu-hidden-list1::before {
+        @apply left-10;
+    }
+    .menu-hidden-list2::before {
+        @apply left-[135px];
+    }
+    .menu-hidden-list3::before {
+        @apply left-[220px];
+    }
+    .menu-hidden-list4::before {
+        @apply left-[320px];
+    }
+    .menu-hidden-list5::before {
+        @apply left-[440px];
+    }
+    .menu-hidden-list6::before {
+        @apply left-[560px];
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .burgerMenu {
+        @apply top-[68px];
+    }
+    .tight__header .burgerMenu {
+        @apply top-[50px];
+    }
+    .headerStore {
+        @apply fixed top-0 w-full;
+    }
+    .header-bottom-container {
+        @apply flex justify-between;
+    }
+    .header-bottom-logo {
+        @apply relative flex;
+    }
+    .storeHeader-burger {
+        @apply flex;
+    }
+    .header-bottom-right-contactUs {
+        @apply w-auto px-4;
+    }
+    .header-bottom-right-login, .header-bottom-right-cart {
+        @apply w-auto;
+    }
+    .header-bottom-right-cart a {
+        @apply px-4;
+    }
+    .btn-personalArea {
+        @apply px-4;
+    }
+    .header-bottom-left {
+        @apply hidden;
+    }
+    .header-bottom-right-search {
+        @apply hidden;
+    }
+    .searchMobile {
+        @apply flex;
+    }
+    .burgerMenu {
+        @apply block;
+    }
+
+
+    .storeSlider-menuSlider-main {
+        @apply flex-col-reverse h-auto;
+    }
+    .storeSlider-smallSlider {
+        @apply w-full order-2 ml-0 mt-5;
+    }
+    .storeSlider-mainSlider {
+        @apply w-full order-3;
+    }
+    .smallSwiper-btnPrev {
+        @apply h-full w-auto items-center left-0 top-0 transform -translate-x-full translate-y-0;
+    }
+    .smallSwiper-btnPrev svg, .smallSwiper-btnNext svg {
+        @apply transform rotate-0;
+    }
+    .smallSwiper-btnNext {
+        @apply h-full w-auto items-center right-0 top-0 transform translate-x-full translate-y-0;
+    }
+    .smallSwiper:hover .smallSwiper-btnPrev, .smallSwiper:hover .smallSwiper-btnNext {
+        @apply transform translate-x-0;
+    }
+
+
+    .footerStore-bottom-main {
+        @apply w-full m-0;
+    }
+
+
+}
+
+@media(max-width: 550px) {
+
+    .tight__header .burgerMenu {
+        @apply top-[102px];
+    }
+    .burgerMenu {
+        @apply top-[126px];
+    }
+    .header-bottom {
+        @apply h-full;
+    }
+    .header-bottom-main {
+        @apply order-2;
+    }
+    .header-bottom-container {
+        @apply p-0 flex-wrap justify-between items-center;
+    }
+    .header-bottom-logo {
+        @apply pl-5 order-1;
+    }
+    .header-bottom-logo-main {
+        @apply h-[68px] w-[90px];
+        background-size: 80px;
+    }
+    .header-bottom-right-login, .header-bottom-right-cart {
+        @apply hidden;
+    }
+    .header-bottom-right-contactUs, .btn-personalArea {
+        @apply px-2.5;
+    }
+    .searchMobile {
+        @apply p-0 w-full order-3;
+    }
+    .searchMobile-form {
+        @apply w-full pb-2.5;
+    }
+    .btnBurgerMenu {
+        @apply pl-2.5;
+    }
+
+
+    .storeSlider {
+        @apply pt-[126px];
+    }
+    .storeSlider, .storeSlider-menuSlider-main {
+        @apply px-0;
+    }
+    .storeSlider-menuSlider, .storeSlider-menuSlider-main {
+        @apply m-0;
+    }
+    .storeSlider-mainSlider {
+        @apply order-2;
+    }
+    .storeSlider-smallSlider {
+        @apply mt-5 ml-0 order-1;
+    }
+    .smallSwiper-swiper-navsBtn {
+        @apply hidden;
+    }
+    .storeSlider-swiper-navsBtn {
+        @apply hidden;
+    }
+
+
+    .mainStore {
+        @apply py-10;
+    }
+    .saleMark, .newMark {
+        @apply text-sm;
+    }
+    .mainStore-product-item-img {
+        @apply px-2.5;
+    }
+    .mainStore-product-item-text {
+        @apply py-[15px] px-2.5;
+    }
+    .mainStore-product-item-text h3 {
+        @apply m-0;
+    }
+    .price-and-buy {
+        @apply h-[200px] flex flex-col justify-end;
+    }
+    .mainStore-product-item-price {
+        @apply p-0 justify-center;
+    }
+    .mainStore-product-item-price .oldPrice {
+        @apply m-0 text-base;
+    }
+    .mainStore-product-item-price span {
+        @apply text-xl;
+    }
+    .mainStore-product-item-saving p {
+        @apply text-[11px];
+    }
+    .mainStore-product-item-saving .savingPrice {
+        @apply text-lg;
+    }
+
+
+    .mainStore-services-main {
+        @apply w-full flex flex-wrap items-center;
+    }
+    .mainStore-services-item {
+        @apply flex items-center justify-center w-1/2 px-2.5 py-5;
+    }
+    .mainStore-services-item a {
+        @apply flex flex-col justify-center items-center;
+    }
+    .mainStore-services-desc {
+        @apply text-center h-[90px];
+    }
+
+
+    .popularProds-navs {
+        @apply hidden;
+    }
+
+
+    .subscribe-form {
+        @apply flex-col;
+    }
+    .subscribe-left {
+        @apply w-full mr-0;
+    }
+    .subscribe-right {
+        @apply w-full mt-5;
+    }
+
+
+
+    .footerStore-logo-mobile {
+        @apply flex w-full justify-center mb-5;
+    }
+    .footerStore-logo-mobile a {
+        @apply w-[90px];
+    }
+    .footerStore-left {
+        @apply w-1/2;
+    }
+    .footerStore-left-logo {
+        @apply hidden;
+    }
+    .footerStore-left .footerStore-item {
+        @apply hidden;
+    }
+    .footerStore-right {
+        @apply w-1/2;
+    }
+    .footerStore-right-main {
+        @apply flex-col;
+    }
+    .footerStore-right-item {
+        @apply w-full flex flex-col items-end pr-5;
+    }
+    .footerStore-right-item:last-child {
+        @apply pr-5;
+    }
+    .footerStore-item {
+        @apply m-0;
+    }
+    .footerStore-item.mobile-link {
+        @apply flex;
+    }
+    .footerStore-item a.footerStore-link {
+        @apply hidden;
+    }
+    .footerStore-bottom-main, .footerStore-bottom-text {
+        @apply m-0 w-full;
+    }
+    
+}
+
+@media(max-width: 428px) {
+
+    .searchMobile-form input {
+        @apply w-full;
+    }
+
+
+    .subscribe-btn {
+        @apply max-w-[140px];
+    }
+
+
+    .footerStore-bottom-container {
+        @apply flex-col;
+    }
+    .footerStore-bottom-desc {
+        @apply text-center;
+    }
+    .footerStore-bottom-text {
+        @apply mt-5;
+    }
+
+}
+
+@media(max-width: 360px) {
+
+    .footerStore-right-item {
+        @apply pr-2.5;
+    }
+    .footerStore-right-item:last-child {
+        @apply pr-2.5;
+    }
+
+}

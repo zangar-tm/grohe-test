@@ -1,0 +1,127 @@
+.page-title {
+    @apply bg-silver2 pb-20 pt-[148px];
+}
+.page-title h1 {
+    @apply text-3xl font-bold;
+}
+
+.contactsPage-content {
+    @apply text-sm w-full pb-20;
+}
+.contactsPage-content-main {
+    @apply w-3/4 pt-5;
+}
+.contactsPage-content h1 {
+    @apply text-sm font-bold my-5;
+}
+
+.contactsPage-form {
+    @apply bg-gray3 py-7 px-8;
+}
+.contactsPage-form label {
+    @apply text-xs mb-1.5;
+}
+.contactsPage-input {
+    @apply flex w-full justify-between mb-2.5;
+}
+.contactsPage-input-item {
+    @apply flex flex-col;
+    width: calc(100% / 3 - 30px);
+}
+.contactsPage-input-item input {
+    @apply min-h-[41px] text-[13px] pl-4 py-2.5 pr-2.5 text-gray4 outline-none border-none;
+}
+.contactsPage-input-item input:focus {
+    box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+}
+.contactsPage-select {
+    @apply flex w-full justify-between mb-2.5;
+}
+.contactsPage-select-item {
+    @apply flex flex-col w-[65%];
+}
+.contactsPage-select-item:last-child {
+    @apply text-xs;
+    width: calc(100% / 3 - 30px);
+}
+.contactsPage-select-item select {
+    @apply h-8 outline-none border-1 border-gray5 pr-6 py-1 pl-2.5;
+}
+.contactsPage-select-item select:focus {
+    box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+}
+.contactsPage-comment {
+    @apply flex flex-col mb-2.5;
+}
+.contactsPage-comment textarea {
+    @apply h-[140px] outline-none p-2.5;
+}
+.contactsPage-comment textarea:focus {
+    box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+}
+.contactsPage-btnSubmit p {
+    @apply mb-2.5;
+}
+.contactsPage-btnSubmit a {
+    @apply underline;
+}
+.btn-btnSubmit {
+    @apply py-2.5 px-[85px] bg-lightblue2 text-white mt-4;
+}
+.btn-btnSubmit:hover {
+    @apply bg-opacity-80;
+}
+
+
+
+
+@media(max-width: 550px) {
+
+    .signIn-form .signIn-input {
+        @apply w-1/2;
+    }
+
+}
+
+@media(max-width: 428px) {
+
+    .signIn-form {
+        @apply items-center;
+    }
+    .signIn-form .signIn-input {
+        @apply w-3/4;
+    }
+    .signIn-form .signIn-input a {
+        @apply flex justify-center;
+    }
+    .signIn-form .signIn-btn {
+        @apply w-3/4;
+    }
+    .signIn-form .signInBtn {
+        @apply w-full flex justify-center;
+    }
+
+    
+    .signUp-form {
+        @apply flex-col items-center px-8;
+    }
+    .signUp-form .signUp-item {
+        @apply flex flex-col items-center w-3/4 px-0;
+    }
+    .signUp-form .signUp-input {
+        @apply w-full;
+    }
+    .signUp-form .signUp-btn {
+        @apply w-3/4 px-0;
+    }
+    .signUp-form .btnSignUp {
+        @apply w-full;
+    }
+
+}
+
+@media(max-width: 390px) {
+    .signIn-form, .signUp-form {
+        @apply px-0;
+    }
+}

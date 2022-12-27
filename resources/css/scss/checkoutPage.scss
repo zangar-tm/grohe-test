@@ -1,0 +1,224 @@
+.checkoutPage {
+    @apply pb-20;
+}
+.back-link {
+    @apply pt-[88px] pb-10 bg-silver5;
+}
+.back-link a {
+    @apply flex items-center transition-all duration-300;
+}
+.back-link a:hover {
+    @apply underline transition-all duration-300;
+}
+.back-link a svg {
+    @apply mr-2.5;
+}
+.checkoutPage-content h1 {
+    @apply mt-5 text-[28px] font-bold;
+}
+.checkoutPage-main {
+    @apply flex justify-between mt-5;
+}
+.checkoutPage-forms {
+    @apply w-[66%];
+}
+.forms-main {
+    @apply pt-5 px-[30px] pb-4 border-1 border-borderClr1;
+}
+.forms-main h1 {
+    @apply text-lightblue2 text-xl font-bold m-0;
+}
+.contacts-form {
+    @apply flex w-full flex-wrap justify-between;
+}
+.form-item {
+    width: calc(50% - 10px);
+}
+.contacts-inputs {
+    @apply flex flex-wrap w-full mt-5;
+}
+.input-item {
+    @apply relative w-full mb-5;
+}
+.input-item input {
+    @apply border-1 border-borderClr1 w-full text-base leading-5 p-3.5 pr-2;
+}
+.input-item input:focus {
+    @apply outline-none;
+}
+.input-item label {
+    @apply absolute top-3.5 left-3.5 pointer-events-none transition-all duration-500;
+}
+.input-item input:focus ~ label {
+    @apply transform -translate-y-6 text-sm transition-all duration-500 bg-white;
+}
+.input-item select {
+    @apply h-[50px] w-full border-1 border-borderClr1 px-3.5 outline-none;
+}
+.btn-submit {
+    @apply py-1.5 px-10 text-white bg-lightblue2 border-2 border-dark1 mt-5 text-base rounded-full transition-all duration-500;
+}
+.btn-submit:hover {
+    @apply bg-opacity-80 transition-all duration-500;
+}
+
+.delivery {
+    @apply w-full mt-5;
+}
+.delivery h1 {
+    @apply text-[22px] text-grayText2 font-normal;
+}
+.delivery-main {
+    @apply mt-5;
+}
+.delivery-main td {
+    @apply w-1/4 text-xs py-2.5 border-t-1 border-borderClr1;
+}
+
+
+
+.order-desc {
+    width: calc(34% - 20px);
+}
+.order-desc-main {
+    @apply border-1 border-borderClr1;
+}
+.order-item {
+    @apply flex px-[30px] pt-6 pb-5 border-b-1 border-b-borderClr1;
+}
+.order-item:last-child {
+    @apply border-none;
+}
+.delivery-icons {
+    @apply relative;
+}
+.deliveryCar-icon {
+    @apply w-[34px] h-[34px];
+}
+.deliveryCar-icon rect {
+    @apply text-lightblue2;
+}
+.bi-circle {
+    @apply absolute top-[-5px] -left-1.5 w-[47px] h-[47px] text-lightblue2;
+}
+p.congrats {
+    @apply text-sm ml-7;
+}
+p.congrats span {
+    @apply font-bold;
+}
+.order-item.order-col {
+    @apply flex-col;
+}
+.order-item h2 {
+    @apply text-xl text-left mb-5 text-lightblue2 normal-case;
+}
+.order-prods, .order-credit {
+    @apply flex justify-between;
+}
+.order-prods p span {
+    @apply text-base;
+}
+.order-prods span, .order-credit span {
+    @apply text-sm;
+}
+.order-prods {
+    @apply mb-1.5;
+}
+.order-credit {
+    @apply text-grayText1;
+}
+.small-total, .order-total {
+    @apply flex w-full justify-between items-center;
+}
+.small-total h3 {
+    @apply text-base font-normal normal-case;
+}
+.small-total span {
+    @apply text-sm;
+}
+.order-total {
+    @apply mt-2.5;
+}
+.order-total h1 {
+    @apply text-xl font-bold m-0;
+}
+.order-total span {
+    @apply text-xl font-bold;
+}
+.order-item-button {
+    @apply flex w-full justify-between items-center cursor-pointer select-none;
+}
+.order-item-button h1 {
+    @apply text-lg m-0;
+}
+.order-item-button svg {
+    @apply text-black transition-all duration-300;
+}
+.order-item-button.rotate-icon svg {
+    @apply transform rotate-180 transition-all duration-300;
+}
+
+
+
+.order-list {
+    @apply hidden flex-col mt-5;
+}
+.order-list.show-flex {
+    @apply flex;
+}
+.order-list-main {
+    @apply flex mb-5;
+}
+.order-list-img {
+    @apply w-[50px] h-[50px] mr-5;
+}
+.order-list-img img {
+    @apply w-full h-full;
+}
+.order-list-desc {
+    @apply text-xs;
+}
+.order-list-price {
+    @apply flex mt-1.5;
+}
+.order-list-price p {
+    @apply ml-2;
+}
+.order-list-btn {
+    @apply mt-5 text-black underline hover:no-underline;
+}
+
+
+
+
+@media(max-width: 768px) {
+
+    .checkoutPage-main {
+        @apply flex-wrap;
+    }
+    .checkoutPage-forms {
+        @apply w-full;
+    }
+    .order-desc {
+        @apply w-full mt-10;
+    }
+
+}
+
+@media(max-width: 550px) {
+
+    .checkoutPage {
+        @apply pb-5;
+    }
+    .forms-main {
+        @apply p-5;
+    }
+    .form-item {
+        @apply w-full;
+    }
+    .btn-submit {
+        @apply w-full;
+    }
+
+}

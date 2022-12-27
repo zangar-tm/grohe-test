@@ -1,0 +1,371 @@
+.cartPage {
+    @apply pb-20;
+}
+.cartPage-content {
+    @apply bg-gray3 border-1 border-silver3 p-5;
+}
+.cartPage-main {
+    @apply bg-white my-5;
+}
+.cartPage-item {
+    @apply flex items-center justify-between border-1 border-silver3;
+}
+.cart-item-title {
+    @apply flex items-center p-4 w-4/6;
+}
+.cart-item-img {
+    @apply w-1/6 px-4;
+}
+.cart-item-desc {
+    @apply w-5/6 px-4;
+}
+.cart-item-desc h4 {
+    @apply text-sm font-bold;
+}
+.cart-item-desc h4:hover {
+    @apply underline;
+}
+.cart-item-desc .code-numbs {
+    @apply ml-0 text-xs;
+}
+.inStock {
+    @apply text-xs ml-1.5 text-lightblue2;
+}
+.add-count {
+    @apply w-1/12 p-4;
+}
+.add-count-main {
+    @apply relative w-[fit-content];
+}
+.add-count-main input {
+    @apply w-[71px] h-[41px] outline-none border-1 border-lightgray1 px-6 text-center;
+}
+.minus-count {
+    @apply absolute left-0 top-[13px] px-1 cursor-pointer select-none;
+}
+.plus-count {
+    @apply absolute right-0 top-[13px] px-1 cursor-pointer select-none;
+}
+.add-count-main svg {
+    @apply text-lightblue2;
+}
+.cart-item-price {
+    @apply w-1/6 p-4 flex flex-col items-center;
+}
+.cart-item-price .oldPrice {
+    @apply text-xs line-through font-normal;
+}
+.cart-item-price .main-price {
+    @apply text-base m-0 font-semibold;
+}
+.cart-item-delete {
+    @apply w-1/12 p-4 pr-8 flex justify-end cursor-pointer transition-all duration-300;
+}
+.cart-item-delete:hover {
+    @apply opacity-70 transition-all duration-300;
+}
+.cart-item-delete svg {
+    @apply w-5 h-5;
+}
+
+
+.cartPage-links {
+    @apply flex w-full justify-between;
+}
+.cartPage-links a {
+    @apply flex items-center;
+}
+.blueText {
+    @apply text-lightblue2;
+}
+.cartPage-links a:hover .blueText {
+    @apply underline;
+}
+.cartPage-links a svg {
+    @apply text-lightblue2 mr-2.5;
+}
+.links-group {
+    @apply flex;
+}
+.links-group a .blackText {
+    @apply transition-all duration-300;
+}
+.links-group a:hover .blackText {
+    @apply text-lightblue2 transition-all duration-300;
+}
+.btn-clearCart {
+    @apply bg-btnClear py-2 px-8 text-sm ml-10 transition-all duration-500;
+}
+.btn-clearCart:hover {
+    @apply opacity-70 transition-all duration-500;
+}
+
+.cartPage-bottom {
+    @apply mt-5 flex justify-between w-full flex-wrap;
+}
+.sales-block {
+    @apply mx-[-15px] bg-gray3 border-1 border-silver3 w-3/5 flex;
+}
+.sale-item {
+    @apply w-1/2 flex flex-col pt-4 pb-2 px-5;
+}
+.sale-item h1 {
+    @apply text-base uppercase font-bold;
+}
+.sale-item p {
+    @apply text-xs;
+}
+.sale-item p a {
+    @apply text-lightblue2 hover:underline;
+}
+.if-signed {
+    @apply hidden;
+}
+.sale-item:last-child a {
+    @apply text-xs text-lightblue2 flex items-center hover:underline mb-2.5;
+}
+.sale-item a svg {
+    @apply w-2.5 h-2.5 ml-1;
+}
+.saleCode-form {
+    @apply mb-5;
+}
+.sale-item input {
+    @apply border-1 border-inpBrdr w-full max-h-[34px] py-1.5 pl-3 pr-7.5 outline-none transition-all duration-300;
+}
+.sale-item input:focus {
+    @apply outline-none transition-all duration-300;
+    box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+}
+.sale-item .signInBtn {
+    @apply mt-2.5 w-1/2 text-base py-1.5;
+}
+.total {
+    @apply w-2/5 mr-[-15px];
+}
+.prem-total {
+    @apply flex w-full justify-between text-sm pb-5 border-b-1 border-inpBrdr ;
+}
+.prem-total h4 {
+    @apply font-bold;
+}
+.main-total {
+    @apply flex w-full justify-between pt-5 items-center;
+}
+.main-total h1 {
+    @apply font-bold text-[22px];
+}
+.main-total span {
+    @apply text-lightblue2 text-[22px];
+}
+.btns-group {
+    @apply w-full flex justify-end ml-[15px] mr-[-15px] mt-5;
+}
+.btns-group-main {
+    @apply flex w-2/5 justify-between;
+}
+.quick-order {
+    @apply border-2 border-lightblue2 rounded-full font-bold text-sm text-lightblue2 py-2.5 px-10 transition-all duration-500;
+}
+.quick-order:hover {
+    @apply bg-lightblue2 text-white transition-all duration-500;
+}
+.checkout.btnCredit {
+    @apply w-auto h-auto uppercase font-bold text-sm py-2.5 px-8 border-2 border-btnCredit transition-all duration-500;
+}
+.checkout.btnCredit:hover {
+    @apply bg-white text-btnCredit transition-all duration-500 opacity-100;
+}
+.checkout.btnCredit:hover span {
+    @apply border-btnCredit;
+}
+.checkout span {
+    @apply border-l-1 border-white ml-5 pl-5;
+}
+
+
+.quick-order-modal {
+    @apply fixed top-0 left-0 w-full h-full flex justify-center items-center z-[99] bg-bgOpacityBlue cursor-pointer opacity-0 invisible transition-all duration-300;
+    &.show {
+        @apply opacity-100 visible transition-all duration-300;
+    }
+}
+.quick-order-main {
+    @apply cursor-default w-[30%];
+}
+.quick-order-title {
+    @apply p-5 rounded-tl-2xl rounded-tr-2xl bg-darkblue text-white;
+    a {
+        @apply font-semibold underline text-sm;
+    }
+    h5 {
+        @apply text-xl font-semibold mr-5;
+    }
+}
+.quick-order-item {
+    @apply flex items-center mb-2.5;
+    svg {
+        @apply w-10 h-10;
+    }
+}
+.quick-order-content {
+    @apply p-5 rounded-bl-2xl rounded-br-2xl bg-white;
+}
+.quick-order-form {
+    @apply flex flex-col;
+    label {
+        @apply font-bold text-sm mb-3;
+    }
+    input {
+        @apply w-full border border-inpBrdr p-3.5 pr-2 text-base outline-none;
+    }
+    .input-group {
+        @apply mt-5 flex justify-between;
+        .input-item {
+            @apply w-[47%];
+            label {
+                @apply relative top-auto left-auto;
+            }
+            input {
+                @apply mt-3;
+            }
+        }
+    }
+    textarea {
+        @apply p-2.5 text-sm border border-inpBrdr outline-none h-[90px];
+    }
+    .btn {
+        @apply mt-10 py-3 px-10 bg-darkblue text-white text-base font-semibold w-[fit-content] rounded-[30px] transition-all duration-300;
+        &:hover {
+            @apply opacity-70 transition-all duration-300;
+        }
+    }
+    span {
+        @apply text-xs mt-5;
+        a {
+            @apply text-darkblue;
+            &:hover {
+                @apply underline;
+            }
+        }
+    }
+}
+
+
+.empty-cart {
+    @apply pt-20;
+    h1 {
+        @apply font-bold mb-5;
+    }
+    a {
+        @apply text-darkblue underline;
+        &:hover {
+            @apply no-underline;
+        }
+    }
+}
+
+
+
+
+@media(max-width: 1024px) {
+
+    .quick-order {
+        @apply px-5;
+    }
+    .checkout.btnCredit {
+        @apply px-[30px];
+    }
+
+}
+
+@media(max-width: 550px) {
+
+    .cartPage {
+        @apply pb-5;
+    }
+
+    .page-title {
+        @apply pb-5 pt-[150px];
+    }
+
+    .cartPage-item {
+        @apply flex-wrap mb-10;
+    }
+    .cart-item-title {
+        @apply w-full flex-col order-1;
+    }
+    .cart-item-img {
+        @apply w-full;
+    }
+    .cart-item-desc {
+        @apply w-full mt-5;
+    }
+    .add-count {
+        @apply w-1/3 flex justify-center order-3;
+    }
+    .cart-item-price {
+        @apply w-full order-2;
+    }
+    .cart-item-price .main-price {
+        @apply text-2xl;
+    }
+    .cart-item-delete {
+        @apply w-1/3 order-4;
+    }
+
+    .cartPage-links {
+        @apply flex-col;
+    }
+    .links-group {
+        @apply flex-col mt-5;
+    }
+    .btn-clearCart {
+        @apply ml-0 mt-5;
+    }
+
+    .cartPage-bottom {
+        @apply m-0 p-0 flex-col;
+    }
+    .sales-block {
+        @apply m-0 w-full flex-col;
+    }
+    .sale-item {
+        @apply w-full;
+    }
+    .sale-item:first-child {
+        @apply pb-5 border-b border-silver3;
+    }
+    .total {
+        @apply w-full m-0 px-15px mt-5;
+    }
+    .btns-group {
+        @apply m-0 px-15px justify-start mt-5;
+    }
+    .btns-group-main {
+        @apply w-full flex-col;
+    }
+    .checkout.btnCredit {
+        @apply mt-5;
+    }
+
+
+    .quick-order-main {
+        @apply w-[90%];
+    }
+    .quick-order-title {
+        @apply p-2.5;
+        h5 {
+            @apply text-base mr-2.5;
+        }
+    }
+    .quick-order-content {
+        @apply p-2.5;
+    }
+    .quick-order-form {
+        .btn {
+            @apply w-full;
+        }
+    }
+
+}

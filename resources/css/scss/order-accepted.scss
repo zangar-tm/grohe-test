@@ -1,0 +1,20 @@
+.order-accepted {
+    h3 {
+        @apply text-4xl uppercase font-bold my-10;
+    }
+    h2 {
+        @apply mt-10 text-left text-4xl uppercase font-bold;
+    }
+    p {
+        @apply text-sm mb-2.5;
+    }
+    .continue {
+        @apply mt-5 mb-10 flex w-full justify-end;
+        a {
+            @apply px-10 py-2.5 text-white text-sm bg-red-600 font-semibold transition-all duration-300;
+            &:hover {
+                @apply opacity-70 transition-all duration-300;
+            }
+        }
+    }
+}

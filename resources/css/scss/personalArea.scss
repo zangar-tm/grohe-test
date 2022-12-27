@@ -1,0 +1,460 @@
+.personalArea-page {
+    @apply py-10 flex w-full;
+    .personalArea-title {
+        @apply w-[70%];
+        h1 {
+            @apply text-[34px] font-bold mb-6;
+        }
+        h4 {
+            @apply text-lg text-lightblue2 mb-2.5;
+        }
+        p {
+            @apply text-lg mb-6;
+        }
+    }
+}
+
+// SIDEBAR
+
+.sidebar {
+    @apply w-[30%] pr-10;
+    &-main {
+        @apply bg-lightblue2 text-white py-2.5 px-5;
+        ul {
+            li {
+                @apply py-2.5 border-b-1 border-white;
+                &:last-child {
+                    @apply border-none;
+                }
+                a {
+                    @apply transition-all duration-300 w-full flex justify-between items-center;
+                    :hover {
+                        @apply opacity-80 transition-all duration-300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ACCOUNT
+
+.account-form {
+    @apply pt-5;
+    .account-item {
+        @apply mb-10;
+        h1 {
+            @apply text-xl mb-5;
+        }
+        .account-inputs {
+            &.first-item {
+                @apply pb-5;
+            }
+            &.second-item {
+                @apply pt-5;
+            }
+            &-item {
+                @apply flex w-full mb-2.5 items-center;
+                .account-label {
+                    @apply w-[33%] text-right pr-5 text-sm;
+                    span {
+                        @apply text-btnCredit;
+                    }
+                }
+                input {
+                    @apply outline-none w-[40%] h-[34px] text-sm px-2.5 border-1 border-borderClr1 transition-all duration-300;
+                    &:focus {
+                        @apply transition-all duration-300;
+                        box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+                    }
+                }
+            }
+        }
+    }
+    .btn-dataSave {
+        @apply flex justify-end;
+        .btn-submit {
+            @apply rounded-none border-none text-sm px-[30px];
+        }
+    }
+}
+
+// ORDERS HISTORY
+
+.order-main {
+    @apply w-full;
+    .orders-item {
+        @apply w-full flex-col px-0 bg-gray-100 flex pt-6 pb-5 border-b border-b-borderClr1 cursor-pointer select-none;
+        ul.order-item-list {
+            @apply flex w-full pb-2.5;
+            li {
+                @apply w-[30%] font-bold flex justify-center;
+                &:last-child {
+                    @apply w-[10%] cursor-pointer select-none items-center;
+                } 
+            }
+        }
+        &.orders-item-title {
+            @apply cursor-default pointer-events-none;
+            li {
+                svg {
+                    @apply hidden;
+                }
+            }
+        }
+        svg {
+            @apply transition-all duration-300;
+        }
+        &.show {
+            @apply shadow-md bg-white border border-borderClr1;
+            svg {
+                @apply transform rotate-180 transition-all duration-300;
+            }
+            .myOrder {
+                @apply block;
+            }
+        }
+        .myOrder {
+            @apply hidden;
+            .myOrder-item {
+                @apply flex w-full py-2.5 border-t-1 border-borderClr1;
+                ul {
+                    @apply flex w-full items-center;
+                    li {
+                        @apply py-2.5 justify-center;
+                    }
+                    .myOrder-img {
+                        @apply w-[30%] h-[100px] flex;
+                        img {
+                            @apply w-[100px] h-full object-contain;
+                        }
+                    }
+                    .myOrder-title {
+                        @apply w-2/5;
+                        a {
+                            @apply text-sm font-bold underline hover:no-underline;
+                        }
+                    }
+                    .myOrder-price {
+                        @apply w-1/5;
+                    }
+                    .myOrder-numb {
+                        @apply w-[10%] flex justify-center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ADRESS
+
+.adress {
+    @apply w-full flex flex-wrap justify-between;
+    .current-adress {
+        @apply w-[45%] mb-10;
+        &-main {
+            @apply bg-white relative z-[2] border-2 border-borderClr1 w-full h-[158px] flex flex-col justify-center px-5;
+        }
+        &-text {
+            h3 {
+                @apply text-base;
+            }
+            p {
+                @apply text-sm;
+            }
+        }
+        &-btns {
+            @apply w-full flex text-sm;
+            .edit-btn {
+                @apply mr-5 flex items-center py-1 px-2.5 underline transition-all duration-300 hover:no-underline hover:transition-all hover:duration-300;
+                svg {
+                    @apply text-yesCol mr-2.5;
+                }
+            }
+            .delete-btn {
+                @apply flex items-center py-1 px-2.5 underline transition-all duration-300 hover:no-underline hover:transition-all hover:duration-300;
+                svg {
+                    @apply text-btnCredit mr-2.5;
+                }
+            }
+        }
+    }
+    .new-adress {
+        @apply w-[45%] mb-10;
+        .adress-add {
+            @apply w-full bg-white relative z-2;
+            a {
+                @apply w-full h-full flex flex-col items-center justify-center py-10 border-2 border-lightblue2 cursor-pointer;
+                svg {
+                    @apply w-[30px] h-[30px] mb-5 text-lightblue2;
+                }
+                span {
+                    @apply font-bold underline;
+                }
+                &:hover {
+                    span {
+                        @apply no-underline;
+                    }
+                }
+            }
+        }
+    }
+    &-main {
+        @apply mb-10 w-full relative z-1 hidden opacity-0 invisible transform translate-y-[-170%] transition-all duration-500;
+        &.show {
+            @apply opacity-100 visible block transform translate-y-0 transition-all duration-500;
+        }
+        .adress-form {
+            @apply w-full flex flex-col mt-10;
+            h1 {
+                @apply text-base font-bold;
+            }
+            .adress-input {
+                @apply relative;
+                input {
+                    @apply w-full py-1.5 pr-2.5 pl-9 border border-borderClr1 transition-all duration-500 outline-none;
+                    &:focus {
+                        @apply transition-all duration-500;
+                        box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+                    }
+                    &::placeholder {
+                        @apply text-sm;
+                    }
+                }
+                svg {
+                    @apply absolute left-2 top-[9px];
+                }
+                .bi-pencil-square {
+                    @apply top-3;
+                }
+            }
+            .adress-save {
+                @apply flex w-full justify-between;
+                .btn-submit {
+                    @apply border-none rounded-none;
+                }
+                .btn-cancel {
+                    @apply py-1.5 px-10 bg-btnClear mt-5 hover:bg-opacity-80 transition-all duration-300 hover:transition-all hover:duration-500;
+                }
+            }
+        }
+    }
+}
+
+// POINTS
+
+.points {
+    .points-info {
+        h1 {
+            @apply text-[34px] font-bold mb-6;
+        }
+        .points-desc {
+            @apply mb-10;
+            p {
+                @apply mb-2.5;
+            }
+        }
+        .points-form {
+            @apply flex justify-between;
+            .points-input {
+                @apply flex flex-col w-1/2;
+                label {
+                    @apply font-bold text-xs;
+                }
+                input {
+                    @apply border border-borderClr1 w-full px-2.5 py-1.5 outline-none transition-all duration-300;
+                    &:focus {
+                        @apply transition-all duration-300;
+                        box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+                    }
+                }
+            }
+            .points-submit {
+                @apply w-[45%] flex items-end;
+                .btn-submit {
+                    @apply w-1/2 m-0 px-5 py-2 border-none rounded-none bg-btnClear text-black transition-all duration-300 hover:bg-opacity-80 hover:transition-all hover:duration-300;
+                }
+            }
+        }
+    }
+    .sertificats {
+        @apply pt-10;
+        h1 {
+            @apply text-[34px] font-bold mb-6;
+        }
+        &-form {
+            @apply w-full relative;
+            .sertificats-input {
+                @apply flex flex-col;
+                label {
+                    @apply text-xs font-bold;
+                }
+                input {
+                    @apply border border-borderClr1 w-1/2 px-2.5 py-1.5 outline-none transition-all duration-300;
+                    &:focus {
+                        @apply transition-all duration-300;
+                        box-shadow: 0 0 0.4rem 0.1rem rgb(57 132 190 / 50%);
+                    }
+                }
+            }
+            .btn-submit {
+                @apply w-1/2 whitespace-nowrap border-none rounded-none px-2.5;
+            }
+        }
+        .sertificat-info {
+            @apply mt-5 w-70%;
+            .info-ok, .info-err {
+                @apply p-5 border border-borderClr1 rounded-[10px];
+                p {
+                    @apply mb-1.5;
+                    &:last-child {
+                        @apply mb-0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 768px) {
+
+    .sidebar {
+        @apply w-1/2;
+    }
+    .personalArea-page {
+        .personalArea-title {
+            @apply w-1/2;
+        }
+    }
+    
+    .adress {
+        .current-adress {
+            @apply w-full;
+        }
+        .new-adress {
+            @apply w-full;
+        }
+    }
+
+    .points {
+        @apply w-1/2;
+        .points-info {
+            h1 {
+                @apply text-[22px] leading-[normal];
+            }
+            .points-form {
+                @apply flex-wrap;
+                .points-input {
+                    @apply w-full;
+                }
+                .points-submit {
+                    @apply w-full mt-5;
+                    .btn-submit {
+                        @apply w-full;
+                    }
+                }
+            }
+        }
+        .sertificats {
+            h1 {
+                @apply text-[22px] leading-[normal];
+            }
+            &-form {
+                .sertificats-input {
+                    input {
+                        @apply w-full;
+                    }
+                }
+                .btn-submit {
+                    @apply w-full;
+                }
+            }
+            .sertificat-info {
+                @apply w-full;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 550px) {
+
+    .personalArea-page {
+        @apply flex-wrap;
+        .personalArea-title {
+            @apply w-full mt-10;
+            h1 {
+                @apply text-[32px];
+            }
+        }
+    }
+
+    .sidebar {
+        @apply w-full pr-0;
+    }
+
+    .account-form {
+        .account-item {
+            .account-inputs {
+                &-item {
+                    input {
+                        @apply w-3/5;
+                    }
+                }
+            }
+        }
+        .btn-dataSave {
+            .btn-submit {
+                @apply text-base;
+            }
+        }
+    }
+
+    .order-main {
+        .orders-item {
+            &.orders-item-title {
+                ul {
+                    @apply justify-between;
+                    li {
+                        @apply w-[33%];
+                        &:last-child {
+                            @apply hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .adress {
+        .current-adress {
+            @apply w-full;
+        }
+        .new-adress {
+            @apply w-full;
+        }
+        &-main {
+            .adress-form {
+                h1 {
+                    @apply text-xl;
+                }
+                .adress-save {
+                    .btn-submit {
+                        @apply w-[45%];
+                    }
+                    .btn-cancel {
+                        @apply w-[45%];
+                    }
+                }
+            }
+        }
+    }
+
+    .points {
+        @apply w-full mt-10;
+    }
+
+}
