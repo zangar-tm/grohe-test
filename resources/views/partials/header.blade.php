@@ -11,7 +11,8 @@
                     </a>
                 </div>
                 <div class="searchMobile">
-                    <form class="searchMobile-form" action="{{route('search.search')}}" method="GET">
+                    <form class="searchMobile-form" action="" method="GET">
+                        {{-- {{route('search.search')}} --}}
                         <input type="text" name="query" placeholder="Поиск по сайту">
                         <button type="submit" class="btn-searchMobile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -27,7 +28,8 @@
                     <div class="header-bottom-left">
                         <div class="header-bottom-left-main">
                             <div class="modalSearch-main hidden-search">
-                                <form action="{{route('search.search')}}" class="modalSearch-form" method="GET">
+                                <form action="" class="modalSearch-form" method="GET">
+                                    {{-- {{route('search.search')}} --}}
                                     <div class="modalSearch-form-inpt">
                                         <input class="modalSearch-form-inpt input"
                                             type="text" name="query" placeholder="Поиск по названию или артикулу">
@@ -42,7 +44,8 @@
                             </div>
                             <ul class="header-bottom-left-nav">
                                 <li class="show-menu1 header-bottom-left-list textRed">
-                                    <a href="{{route('article.sales')}}" class="header-bottom-left-list-link">Акции</a>
+                                    <a href="" class="header-bottom-left-list-link">Акции</a>
+                                    {{-- {{route('article.sales')}} --}}
                                 </li>
                                 <li class="header-bottom-left-list textDarkBlue">
                                     <a href="/new-products" class="header-bottom-left-list-link">Новинки</a>
@@ -126,18 +129,19 @@
         <div class="burgerMenu-main">
             <ul>
                 <li class="burgerMenu-main-list">
-                    <a href=" @if(auth('customer')->user()){{route('home.account')}}@else{{route('home.login')}}@endif">
+                    <a href=" ">
+                        {{-- @if(auth('customer')->user()){{route('home.account')}}@else{{route('home.login')}}@endif --}}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                             <path
                                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z">
                             </path>
                         </svg>
-                        @if(Auth::guard('customer')->user())
+                        {{-- @if(Auth::guard('customer')->user())
                         <span>{{ auth('customer')->user()->first_name }} {{ auth('customer')->user()->last_name }}</span>
-                        @else
+                        @else --}}
                         <span>Войти</span>
-                        @endif
+                        {{-- @endif --}}
                     </a>
                 </li>
                 <li class="burgerMenu-main-list sales"> <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -176,7 +180,8 @@
                 @endif
                 <li class="burgerMenu-main-list bg-darkness">
                     <span class="burgerMenu-main-list-heading">
-                        <a href="{{route('home.contact')}}">
+                        <a href="">
+                            {{-- {{route('home.contact')}} --}}
                         <svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-person-lines-fill" viewBox="0 0 16 16">
@@ -190,7 +195,8 @@
                 </li>
                 <li class="burgerMenu-main-list bg-darkness">
                     <span class="burgerMenu-main-list-heading">
-                        <a href="{{route('cart.cart')}}">
+                        <a href="">
+                            {{-- {{route('cart.cart')}} --}}
                         <svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-bag" viewBox="0 0 16 16">
@@ -198,12 +204,12 @@
                                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z">
                             </path>
                         </svg>
-                        @php
+                        {{-- @php
                         $items = \Cart::session(1)->getContent();
                         @endphp
                         <span class="burgerMenu-main-link">Корзина
                             <span class="cart-counts">{{$items->count()}}</span> шт.
-                        </span>
+                        </span> --}}
                         </a>
                     </span>
                 </li>

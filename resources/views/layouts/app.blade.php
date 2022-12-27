@@ -14,7 +14,7 @@
   <div id="app">
     @include('partials.header')
     @yield('content')
-    @include('partials.subscribe')
+    {{-- @include('partials.subscribe') --}}
     @include('partials.footer')
   </div>
   <script src="/js/app.js?3"></script>
@@ -22,5 +22,4 @@
   @stack('js')
 
 </body>
-
 </html>

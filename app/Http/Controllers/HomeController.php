@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         $slides = Slide::active()->orderBy('position','asc')->limit(5)->get();
-        $setproducts = Product::active()->where('is_set',true)->orWhere('title','like',['%набор%','%комплект%'])->orderBy('created_at','desc')->limit(10)->get();
+        $setproducts = Product::active()->whereJsonContains('statuses', 'Комплект')->orWhere('title','like',['%набор%','%комплект%'])->orderBy('created_at','desc')->limit(10)->get();
         $products = Product::active()->orderBy('created_at','desc')->limit(10)->get();
         return view('pages.index', compact('slides','setproducts','products'));
     }
