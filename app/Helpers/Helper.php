@@ -6,14 +6,14 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Models\Setting;
 
-// function setting($key)
-// {
-//     $setting = Setting::where('key', $key)->first();
-//     if ($setting) {
-//         return $setting->value;
-//     }
-//     return null;
-// }
+function setting($key)
+{
+    // $setting = Setting::where('key', $key)->first();
+    // if ($setting) {
+    //     return $setting->value;
+    // }
+    return null;
+}
 
 // function fileUrl($path)
 // {
